@@ -65,6 +65,6 @@ app.post('/resize', upload.single('image'), async (req, res) => {
 // ... (existing code)
 
 
-app.listen(port, () => {
+app.listen(process.env.port || port, () => {
   console.log(`Server is running at http://localhost:${port}`);
 });
